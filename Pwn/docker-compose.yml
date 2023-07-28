@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  binary:
+    build: .
+    image: YOUR-USER-NAME/badchars
+    restart: always
+    ports:
+      - "127.0.0.1:8302:9999"
+    environment:
+      - GZCTF_FLAG=flag{kfccrazythursdayvme50}

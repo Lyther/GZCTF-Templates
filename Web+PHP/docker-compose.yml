@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  web:
+    build: .
+    image: YOUR-USER-NAME/php4fun2
+    restart: always
+    ports:
+      - "127.0.0.1:8302:80"
+    environment:
+      - GZCTF_FLAG=flag{kfccrazythursdayvme50}
