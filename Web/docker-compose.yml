@@ -6,6 +6,6 @@ services:
     image: YOUR-USER-NAME/websign
     restart: always
     ports:
-      - "127.0.0.1:8302:80"
+      - "127.0.0.1:8302:1337"
     environment:
       - GZCTF_FLAG=flag{kfccrazythursdayvme50}

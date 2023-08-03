@@ -1,4 +1,12 @@
-FROM httpd:2.4
-COPY ./utils/ /usr/local/apache2/htdocs/
-EXPOSE 80
+FROM python
+
+COPY app /app
+WORKDIR /app
+
+ADD start.sh .
+RUN mkdir /init-scripts/ \
+    && mv ./start.sh /init-scripts/ \
+    && chmod +x /init-scripts/start.sh
+
+EXPOSE 1337
 ENTRYPOINT ["/init-scripts/start.sh"]
