@@ -8,6 +8,7 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe"> /etc/apt/s
 
 COPY database.sql /root/
 COPY *.php /var/www/html/
+RUN rm /var/www/html/index.html
 
 COPY start.sh /usr/bin
 RUN chmod +x /usr/bin/start.sh

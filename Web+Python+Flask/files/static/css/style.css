@@ -1,0 +1,191 @@
+@charset "UTF-8";
+@import url("grid.css");
+
+img {
+	max-width:100%;
+	height: auto;/*高さ自動*/
+}
+a {
+    display:block;
+    color: #666;
+    text-decoration-line: none;
+}
+a:hover { 
+    color: #999;
+}
+a img:hover {
+	opacity: 0.8;
+}
+.underline {
+	border-bottom: 3px solid #000;
+	padding-bottom: 0.5rem;
+}
+.center {
+	text-align: center;
+}
+
+/*ヘッダー
+-------------------------------------*/
+.head {
+	display: flex;
+    flex-direction: row;
+    padding: 1rem 0 0 0;
+}
+
+.head h1 { 
+    padding: 1rem 0;
+	font-weight: 700;
+	letter-spacing: 3px;
+}
+.snsbox {
+	margin-left: auto;
+	font-size: 3.0rem;
+	padding: 1rem 0 0 0;
+}
+nav ul {
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+	margin-bottom: 0.5rem;
+}
+nav li {
+    display: block;
+    flex: 0 0 15%;
+}
+nav li a {
+    text-decoration: none;
+    text-align: center;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+nav a {
+    padding: 1rem;
+}
+
+@media screen and (min-width: 768px){
+/* PC時はMENUボタンを非表示 */
+#open,#close {
+    display: none !important;
+}
+
+#navi {
+    display: block !important;
+}
+}
+
+@media screen and (max-width: 768px){
+.head {
+	flex-direction: column;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.telbox {
+	margin-left: 0;
+	text-align: center;
+}
+.head #open,#close  {
+    position: absolute;
+    top: 28px;
+    right: 12px;
+    }
+nav ul {
+	flex-direction: column;
+}
+
+nav li {
+	padding-top: 0;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 0;
+}
+/* スマホ時はMENUボタンを表示 */
+#open,#close  {
+    display: block;
+    width: 50px;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 12px;
+}
+/* スマホ時はメニューを非表示 */
+#navi {
+    display: none;
+}
+}
+
+/*メイン画像
+-------------------------------------*/
+.mainimg img {
+	width: 100vw;
+}
+
+/*メインコンテンツ
+-------------------------------------*/
+main {
+    margin: 5rem 0 5rem 0;
+}
+
+/*キャッチタイトル
+-------------------------------------*/
+h2.catch {
+	text-align: center;
+	color: #666;
+	font-size: 4.0rem;
+	margin-bottom: 3rem;
+}
+
+/*フッター
+-------------------------------------*/
+footer {
+    background-color: #fff;
+    padding: 3rem 0;
+}
+footer h5 {
+    border-bottom: 1px solid #ccc;
+}
+
+/*コピーライト
+-------------------------------------*/
+.copyright {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #fff;
+}
+.copyright a {
+    color: #000;
+    text-decoration: none;
+	display: inline-block;
+}
+
+/*ページトップへ戻るボタン
+-------------------------------------*/
+#pagetop {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+#pagetop a {
+    display: block;
+    background: #666;
+    color: #fff;
+    width: 50px;
+    padding: 10px 5px;
+    text-align: center;
+}
+#pagetop a:hover {
+    background: #999;
+}
+/*パンくずリスト
+-----------------------------------*/
+.breadcrumb {
+    margin: 0 0 1em 0;
+    padding: 0;	
+}
+.breadcrumb li {
+    list-style-type: none;
+}
+.breadcrumb li a {
+    display: inline-block;
+    color: #959fa5;
+}

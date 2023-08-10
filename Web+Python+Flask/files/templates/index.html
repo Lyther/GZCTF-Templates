@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>我好想吃三鲜伊面！</title>
+    <link rel="stylesheet" media="all" href="static/css/ress.min.css" />
+    <link rel="stylesheet" media="all" href="static/css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col span-12">
+                <div class="head">
+                <h1><a href="javascript:alert('🍜')">面！我超，面！ 🍜</a></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="mainimg">
+    <div class="container">
+        <div class="row">
+            <center>
+            <div class="col span-6">
+                <img src="static/img/ramen.jpg" alt="ramen">
+            </div>
+            </center>
+        </div>
+    </div>
+</div>
+<main>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col span-6">
+                <div style="padding: 10px; margin-bottom: 10px; border: 1px dotted #333333;">
+                <center>
+                <h2  class="catch">UserData (texts)</h2>
+                <h5>零花钱: ${{info.balance}}</h5>
+                <h5>三鲜伊面: {{info.noodles}}/2</h5>
+                <h5>周小玲: {{info.snack}}/1</h5>
+                <h5>小卖部顾客: <font size="4">{{info.user_id}}</font></h5>
+                </center>
+                </div>
+            </div>
+            <div class="col span-6">
+                <center>
+                <h2  class="catch">Store</h2>
+                三鲜伊面 ￥10000/包<br>
+                <button style="width:80%;" onclick="$.post('/buy_noodles', function(data){alert(data);location.reload();});">Buy</button><br>
+                周小玲 ￥20000/包<br>
+                <button style="width:80%;" onclick="$.post('/buy_snack', function(data){alert(data);location.reload();});;">Buy</button><br>
+                <font color="red">Flag</font><br>(Noodles>=2, snack>=1)<br>
+                <button style="width:80%;" onclick="location.href='./eat';">😋</button><br>
+                </center>
+            </div>
+        </div>
+    </div>
+</section> 
+</main>
+</body>
+</html>
